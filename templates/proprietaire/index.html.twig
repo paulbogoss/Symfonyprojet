@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des pro en BDD{% endblock %}
+
+{% block body %}
+    <h1>Gestion des Proprio en BDD</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th></th>
+        </tr>
+        {% for p in proprietaires %}
+            <tr>
+                <td>{{ p.nom }}</td>
+                <td>{{ p.prenom }}</td>
+                <td>
+
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{path("app_proprietaire_ajouter")}}" class="btn btn-success">Ajouter un proprietaire</a>
+{% endblock %}

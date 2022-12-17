@@ -1,0 +1,8 @@
+{% extends  'base.html.twig'%}
+
+{% block title %}Modifier un proprietaire{% endblock %}
+
+{% block body %}
+    <h1>Modifier le proprietaire <i>{{ proprietaire.nom }}</i></h1>
+    {{ form(formulaire) }}
+{% endblock %}
